@@ -1,0 +1,38 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="DirectorioTelefonico.Views.MainWindow"
+        Title="Directorio Telefónico"
+        Width="800" Height="600">
+
+    <StackPanel Margin="10">
+        <TextBlock Text="Directorio Telefónico" FontSize="20" FontWeight="Bold" Margin="0,0,0,10"/>
+
+        <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto" ColumnDefinitions="Auto, *">
+            <TextBlock Text="Documento:" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center"/>
+            <TextBox x:Name="txtDocumento" Grid.Row="0" Grid.Column="1"/>
+
+            <TextBlock Text="Nombre:" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center"/>
+            <TextBox x:Name="txtNombre" Grid.Row="1" Grid.Column="1"/>
+
+            <TextBlock Text="Apellidos:" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center"/>
+            <TextBox x:Name="txtApellidos" Grid.Row="2" Grid.Column="1"/>
+
+            <TextBlock Text="Teléfono:" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center"/>
+            <TextBox x:Name="txtTelefono" Grid.Row="3" Grid.Column="1"/>
+
+            <TextBlock Text="Cargo:" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center"/>
+            <TextBox x:Name="txtCargo" Grid.Row="4" Grid.Column="1"/>
+
+            <TextBlock Text="Oficina:" Grid.Row="5" Grid.Column="0" VerticalAlignment="Center"/>
+            <TextBox x:Name="txtOficina" Grid.Row="5" Grid.Column="1"/>
+        </Grid>
+
+        <StackPanel Orientation="Horizontal" Margin="0,10,0,10" HorizontalAlignment="Left" Spacing="10">
+            <Button x:Name="btnAgregar" Content="Agregar" Width="100"/>
+            <Button x:Name="btnListar" Content="Listar" Width="100"/>
+            <Button x:Name="btnEliminar" Content="Eliminar" Width="100"/>
+        </StackPanel>
+
+        <DataGrid x:Name="dgEmpleados" AutoGenerateColumns="True" Height="300"/>
+    </StackPanel>
+</Window>
